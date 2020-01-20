@@ -1,0 +1,9 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa-custom:latest
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command: ["train", "--config" , "config/config.yml","--domain","domain.yml","--data","data","--out","models"]    

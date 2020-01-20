@@ -1,0 +1,16 @@
+__pycache__/*
+button_CustomerSupport.json
+models/*
+.vscode/*
+events.db
+rasa.db
+deploy/*
+other commands/*
+actions/__pycache__/*
+actions/api_util/__pycache__/*
+events.db-shm
+events.db-wal
+/venv/*
+rasa.db-shm
+rasa.db-wal
+nginx

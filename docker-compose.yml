@@ -1,0 +1,15 @@
+version: '3.0'
+services:     
+  rasa:
+    image: rasa/rasa:1.6.1-full
+    ports:
+     - 5005:5005
+    volumes:
+      - ./:/app
+    command: ["run","-m","models","-p","5005","--enable-api" ,"--endpoints" , "config/endpoints.yml" , "--credentials","config/credentials.yml","--cors","*"]
+  actionserver:
+    image: rasa/rasa-sdk:1.6.1
+    volumes:
+      - ./actions:/app/actions
+
+      
